@@ -38,7 +38,6 @@ env/
 .env.local
 
 # Uploads
-backend/uploads/*
 !backend/uploads/.gitkeep
 
 # Logs
