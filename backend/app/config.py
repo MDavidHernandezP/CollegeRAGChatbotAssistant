@@ -14,18 +14,26 @@ class Settings(BaseSettings):
     MILVUS_HOST: str = "milvus-standalone"
     MILVUS_PORT: int = 19530
     MILVUS_COLLECTION: str = "documents"
-    MILVUS_DIMENSION: int = 384  # all-MiniLM-L6-v2 dimension
+    MILVUS_DIMENSION: int = 384
     
     # Embedding Settings
     EMBEDDING_MODEL: str = "sentence-transformers/all-MiniLM-L6-v2"
     EMBEDDING_DEVICE: str = "cpu"
     
     # LLM Settings
-    LLM_PROVIDER: str = "openai"  # "openai" or "local"
+    LLM_PROVIDER: str = "gemini"  # "openai", "gemini"
+    
+    # OpenAI Settings
     OPENAI_API_KEY: str = ""
     OPENAI_MODEL: str = "gpt-3.5-turbo"
-    OPENAI_MAX_TOKENS: int = 1000
-    OPENAI_TEMPERATURE: float = 0.7
+    
+    # Gemini Settings
+    GEMINI_API_KEY: str = ""
+    GEMINI_MODEL: str = "gemini-pro"  # o "gemini-1.5-flash" (más rápido)
+    
+    # General LLM Settings
+    LLM_MAX_TOKENS: int = 1000
+    LLM_TEMPERATURE: float = 0.7
     
     # Chunking Settings
     CHUNK_SIZE: int = 500
